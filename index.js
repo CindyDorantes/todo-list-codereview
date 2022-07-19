@@ -7,7 +7,6 @@ const btnAdd = document.getElementById('btn-add');
 const btnClearAll = document.querySelector('.clear-btn');
 let taskList = [];
 
-// Event for adding a new task, whenever the button add is cliked //
 btnAdd.addEventListener('click', () => {
   const inputTask = document.querySelector('.input-task').value;
   const newTask = new Task(inputTask);
@@ -21,7 +20,6 @@ btnAdd.addEventListener('click', () => {
   localStorage.setItem('taskList', JSON.stringify(taskList));
 });
 
-// Event for delete all the tasks that are checked
 btnClearAll.addEventListener('click', () => {
   taskList = JSON.parse(localStorage.getItem('taskList'));
   taskList = taskList.filter((x) => (x.completed !== true));
@@ -32,7 +30,6 @@ btnClearAll.addEventListener('click', () => {
   localStorage.setItem('taskList', JSON.stringify(taskList));
 });
 
-// Restores information from localStorage when the page is refreshed
 if (localStorage.getItem('taskList')) {
   taskList = JSON.parse(localStorage.getItem('taskList'));
   for (let i = 0; i < taskList.length; i += 1) {
