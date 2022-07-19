@@ -7,7 +7,7 @@ const btnAdd = document.getElementById('btn-add');
 const btnClearAll = document.querySelector('.clear-btn');
 let taskList = [];
 
-// Event for adding a new task, whenever the button add is cliked
+// Event for adding a new task, whenever the button add is cliked //
 btnAdd.addEventListener('click', () => {
   const inputTask = document.querySelector('.input-task').value;
   const newTask = new Task(inputTask);

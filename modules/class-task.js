@@ -43,7 +43,7 @@ export default class {
     const lineHr = document.createElement('hr');
     toDoContainer.appendChild(lineHr);
 
-    // MODIFY KEY 'COMPLETED' WHENEVER THE CHECKBOX CHANGES
+    // MODIFY KEY 'COMPLETED' WHENEVER THE CHECKBOX CHANGES //
     taskCheck.addEventListener('change', () => {
       if (taskCheck.checked === true) {
         taskCheck.classList.add('checked');
